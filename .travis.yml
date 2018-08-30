@@ -4,6 +4,7 @@ node_js:
 install:
   - npm install uglify-es -g
 script:
+  - mkdir ./minified
   - uglifyjs kazel.js -o ./minified/kazel.min.js
   - uglifyjs kazel-filters.js -o ./minified/kazel-filters.min.js
   - uglifyjs KazelList.js -o ./minified/KazelList.min.js
