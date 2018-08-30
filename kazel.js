@@ -131,12 +131,5 @@ export const kazel = (config, ...rest) => {
   }
 }
 
-/**
- * KazelList
- */
 export { KazelList }
-
-/**
- * Filters
- */
 export * from './kazel-filters.js'
