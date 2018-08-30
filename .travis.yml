@@ -1,0 +1,15 @@
+language: node_js
+install:
+  - npm install uglify-js -g
+script:
+  - uglifyjs kazel.js -o ./minified/kazel.min.js
+  - uglifyjs kazel-filters.js -o ./minified/kazel-filters.min.js
+  - uglifyjs KazelList.js -o ./minified/KazelList.min.js
+deploy:
+  provider: releases
+  api_key: $GH_TOKEN
+  file:
+    - "./minified/kazel.min.js"
+    - "./minified/kazel-filters.min.js"
+    - "./minified/KazelList.min.js"
+  skip_cleanup: true
