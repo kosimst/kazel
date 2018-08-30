@@ -16,3 +16,4 @@ deploy:
     - "./minified/kazel-filters.min.js"
     - "./minified/KazelList.min.js"
   skip_cleanup: true
+  name: kazel-release-$(TRAVIS_COMMIT_MESSAGE)
