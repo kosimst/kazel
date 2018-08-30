@@ -1,6 +1,8 @@
 language: node_js
+node_js:
+  - "node"
 install:
-  - npm install uglify-js -g
+  - npm install uglify-es -g
 script:
   - uglifyjs kazel.js -o ./minified/kazel.min.js
   - uglifyjs kazel-filters.js -o ./minified/kazel-filters.min.js
