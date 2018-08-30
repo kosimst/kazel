@@ -9,11 +9,8 @@ import {
   children,
   siblings,
   expect,
-} from './kazel.js'
+} from './minified/kazel.min.js'
 
-console.log(kazel`body`(expect)`div``h3`().then(console.log))
-const h3 = document.createElement('h3')
+console.log(document.querySelectorAll('div button a, div span a'))
 
-kazel`body > div`(first).appendChild(h3)
-
-h3.classList.add('test')
+console.log(kazel`div``button, span``a`())
