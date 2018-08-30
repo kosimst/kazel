@@ -1,0 +1,19 @@
+{
+  "name": "kazel",
+  "version": "1.0.0",
+  "description": "Advanced querySelector",
+  "main": "kazel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosimst/kazel.git"
+  },
+  "author": "Simon Steindl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kosimst/kazel/issues"
+  },
+  "homepage": "https://github.com/kosimst/kazel#readme"
+}
