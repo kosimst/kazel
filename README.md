@@ -142,6 +142,7 @@ All HTMLElement props and methods (like classList) should work, if not, please c
 > - Optimize selecting for given elements
 > - Improve error handling
 > - Reduce code
+> - Add index.html and index.js with usefull examples
 
 > Next features (create an issue for feature request):
 >
