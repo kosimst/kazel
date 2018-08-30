@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "node"
+  - 'node'
+
+if: tag IS present
+
 install:
   - npm install uglify-es -g
 script:
@@ -12,8 +15,8 @@ deploy:
   provider: releases
   api_key: $GH_TOKEN
   file:
-    - "./minified/kazel.min.js"
-    - "./minified/kazel-filters.min.js"
-    - "./minified/KazelList.min.js"
+    - './minified/kazel.min.js'
+    - './minified/kazel-filters.min.js'
+    - './minified/KazelList.min.js'
   skip_cleanup: true
-  name: "kazel-release-${TRAVIS_COMMIT}"
+  name: 'kazel-release-${TRAVIS_COMMIT}'
