@@ -6,6 +6,32 @@
 
 Everybody knows the following situation: You have a bunch of HTML-Elements and want to change something about them e.g. add a class or change the innerText. But that's always quite frustrating, as you can't change them all at once. In fact, you can't even loop or map over them, because it's a NodeList and not an Array.
 
+### Installation
+
+Install from npm:
+
+```
+npm install --save kazel
+```
+
+Import in Javascript:
+
+```javascript
+import { kazel } from '/node_modules/kazel/kazel.js'
+```
+
+### Available imports
+
+- `kazel`: Selector function
+- `KazelList`: KazelList (Advanced NodeList with Array Methods and able to change multiple elements at once -> is returned by a kazel`` - selector)
+- `deep`: Filter for ShadowRoot
+- `parent`: Filter for parentElements
+- `first`: Filter for first child
+- `last`: filter for last child
+- `expect`: Filter to expect following elements
+- `children`: Filter for children
+- `matches`: Filter returns boolean wether selector matches or not
+
 ### Native
 
 ```javascript
@@ -122,7 +148,9 @@ To select an element that will be added dynamically use the `expect` - Custom Fi
 
 ```javascript
 // in async function
-const elmnt = await kazel`selectorToStaticParent`(expect)`dynamic Child selector`()
+const elmnt = await kazel`selectorToStaticParent`(
+  expect,
+)`dynamic Child selector`()
 ```
 
 The selectoreToStaticParent doesn't have to be the parentNode of the dynamic child, it can be anywhere above the dynamic child.
@@ -130,9 +158,11 @@ The selectoreToStaticParent doesn't have to be the parentNode of the dynamic chi
 ## **! Always add empty parentheses after the template string to get all results !**
 
 If you want to change a property on multiple elements, just select then start changing the property just like you would do on a single element:
+
 ```javascript
 kazel`.elementsToChange`.style = 'background: red;'
 ```
+
 All HTMLElement props and methods (like classList) should work, if not, please create an Issue.
 
 > Note: more docs will be added soon, for question or bugs please create an issue
