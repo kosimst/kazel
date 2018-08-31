@@ -11,15 +11,19 @@ script:
   - uglifyjs KazelList.js -o ./minified/KazelList.min.js
 deploy:
   - provider: releases
-  api_key: $GH_TOKEN
-  file_glob: true
-  file: minified/*
-  skip_cleanup: true
-  name: "kazel-stable"
+    api_key: $GH_TOKEN
+    file_glob: true
+    file: minified/*
+    skip_cleanup: true
+    name: "kazel-stable"
+    on:
+      tags: true
   - provider: npm
-  email: "kosimst@gmail.com"
-  api_key: $NPM_TOKEN
-  skip_cleanup: true
-  name: kazel
-  file_glob: true
-  file: minified/*
+    email: "kosimst@gmail.com"
+    api_key: $NPM_TOKEN
+    skip_cleanup: true
+    name: kazel
+    file_glob: true
+    file: minified/*
+    on:
+      tags: true
