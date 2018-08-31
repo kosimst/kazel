@@ -18,13 +18,11 @@ deploy:
   name: "kazel-stable"
   on:
     tags: true
-    branch: master
   - provider: npm
   email: "kosimst@gmail.com"
   api_key: $NPM_TOKEN
   on:
     tags: true
-    branch: master
   skip_cleanup: true
   name: kazel
   file_glob: true
