@@ -26,6 +26,3 @@ deploy:
     name: kazel
     file_glob: true
     file: minified/*
-    on:
-      tags: true
-      condition: $TRAVIS_BRANCH =~ ^v
