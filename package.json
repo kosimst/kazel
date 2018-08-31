@@ -1,6 +1,6 @@
 {
   "name": "kazel",
-  "version": "1.0.0",
+  "version": "0.9",
   "description": "Advanced querySelector",
   "main": "kazel.js",
   "scripts": {
