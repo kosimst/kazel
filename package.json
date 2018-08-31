@@ -11,7 +11,7 @@
     "url": "git+https://github.com/kosimst/kazel.git"
   },
   "author": "Simon Steindl",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kosimst/kazel/issues"
   },
