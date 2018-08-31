@@ -14,9 +14,7 @@ script:
 deploy:
   provider: releases
   api_key: $GH_TOKEN
-  file:
-    - "./minified/kazel.min.js"
-    - "./minified/kazel-filters.min.js"
-    - "./minified/KazelList.min.js"
+  file_glob: true
+  file: minified/*
   skip_cleanup: true
   name: "kazel-release-${TRAVIS_TAG}"
