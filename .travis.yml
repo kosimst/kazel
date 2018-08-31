@@ -20,7 +20,7 @@ deploy:
       tags: true
       condition: $TRAVIS_BRANCH =~ ^v
   - provider: npm
-    email: 'kosimst@gmail.com'
+    email: "kosimst@gmail.com"
     api_key: $NPM_TOKEN
     skip_cleanup: true
     name: kazel
