@@ -16,13 +16,9 @@ deploy:
   file: minified/*
   skip_cleanup: true
   name: "kazel-stable"
-  on:
-    tags: true
   - provider: npm
   email: "kosimst@gmail.com"
   api_key: $NPM_TOKEN
-  on:
-    tags: true
   skip_cleanup: true
   name: kazel
   file_glob: true
