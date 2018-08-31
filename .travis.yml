@@ -17,4 +17,4 @@ deploy:
   file_glob: true
   file: minified/*
   skip_cleanup: true
-  name: "kazel-release-$(TRAVIS_BRANCH)"
+  name: "kazel-stable"
