@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "node"
 
-if: (tag =~ ^v) AND (branch = master)
+if: branch = master
 
 install:
   - npm install uglify-es -g
