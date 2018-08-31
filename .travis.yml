@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "node"
+  - 'node'
 
 install:
   - npm install uglify-es -g
@@ -15,11 +15,12 @@ deploy:
     file_glob: true
     file: minified/*
     skip_cleanup: true
-    name: "kazel-stable"
+    name: kazel-${TRAVIS_BRANCH}
     on:
       tags: true
+      condition: $TRAVIS_BRANCH =~ ^v
   - provider: npm
-    email: "kosimst@gmail.com"
+    email: 'kosimst@gmail.com'
     api_key: $NPM_TOKEN
     skip_cleanup: true
     name: kazel
@@ -27,3 +28,4 @@ deploy:
     file: minified/*
     on:
       tags: true
+      condition: $TRAVIS_BRANCH =~ ^v
