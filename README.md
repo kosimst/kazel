@@ -30,7 +30,7 @@ import { kazel } from '/node_modules/kazel/kazel.js'
 - `last`: filter for last child
 - `expect`: Filter to expect following elements
 - `children`: Filter for children
-- `matches`: Filter returns boolean wether selector matches or not
+- `matches`: Filter returns boolean whether selector matches or not
 
 ### Native
 
@@ -82,7 +82,7 @@ elmnts.forEach(/* do something */)
 - ### Await for elements or elements to match selector
   ```javascript
   // in async function
-  const dymicallyAddedElmnt = await kazel`#parent`(expect)`h1.dynamic`()
+  const dynamicallyAddedElmnt = await kazel`#parent`(expect)`h1.dynamic`()
   // Promise will be fulfilled if 'h1.dynamic' is a child of '#parent'
   ```
 - ### Check relation between given HTMLElements
@@ -172,7 +172,7 @@ All HTMLElement props and methods (like classList) should work, if not, please c
 > - Optimize selecting for given elements
 > - Improve error handling
 > - Reduce code
-> - Add index.html and index.js with usefull examples
+> - Add index.html and index.js with useful examples
 
 > Next features (create an issue for feature request):
 >
