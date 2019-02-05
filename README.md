@@ -93,7 +93,7 @@ elmnts.forEach(/* do something */)
 - ### Combination and Currying
 
   ```javascript
-  const selecInMyDiv = kazel`#myDiv`
+  const selectInMyDiv = kazel`#myDiv`
   selectInMyDiv`.child-of-myDiv`()
 
   // or combinating
@@ -108,7 +108,7 @@ elmnts.forEach(/* do something */)
   ```
 - ### Shadow Root
   ```javascript
-  kazel`#elmntWithShadowDom`(deep)`.elemntsInShadowRoot`
+  kazel`#elmntWithShadowDom`(deep)`.elmntsInShadowRoot`
   ```
 
 ## Usage
@@ -153,7 +153,7 @@ const elmnt = await kazel`selectorToStaticParent`(
 )`dynamic Child selector`()
 ```
 
-The selectoreToStaticParent doesn't have to be the parentNode of the dynamic child, it can be anywhere above the dynamic child.
+The selectorToStaticParent doesn't have to be the parentNode of the dynamic child, it can be anywhere above the dynamic child.
 
 ## **! Always add empty parentheses after the template string to get all results !**
 
